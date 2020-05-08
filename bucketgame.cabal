@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 9b04a41e4ccdc724235186aee562873b56c6951e84b17d663b2ec8f1afb218bf
+-- hash: 244b00e0c4c13624f20540907e4a91a3c1fa5820cc0d8be36e88a290cbbe4d95
 
 name:           bucketgame
 version:        0.1.0.0
@@ -34,6 +34,13 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , containers
+    , firefly
+    , http-types
+    , random
+    , random-shuffle
+    , safe
+    , text
   default-language: Haskell2010
 
 executable bucketgame-exe
@@ -46,6 +53,13 @@ executable bucketgame-exe
   build-depends:
       base >=4.7 && <5
     , bucketgame
+    , containers
+    , firefly
+    , http-types
+    , random
+    , random-shuffle
+    , safe
+    , text
   default-language: Haskell2010
 
 test-suite bucketgame-test
@@ -59,4 +73,11 @@ test-suite bucketgame-test
   build-depends:
       base >=4.7 && <5
     , bucketgame
+    , containers
+    , firefly
+    , http-types
+    , random
+    , random-shuffle
+    , safe
+    , text
   default-language: Haskell2010

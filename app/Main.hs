@@ -34,7 +34,6 @@ main = do
                     return $ cors "fail"
                   else do
                     liftIO $ print "Adding an entry"
-                    liftIO $ print n
                     liftIO $ modifyMVar_ entries (pure . (n:))
                     return $ cors "added"
              Nothing -> do
@@ -45,7 +44,6 @@ main = do
         g <- liftIO newStdGen
         liftIO $ print "resetting the round"
         es <- liftIO $ readMVar entries
-        liftIO $ print es
         liftIO $ modifyMVar_ unseen (const . return $ shuffle' es (length es) g)
         return $ cors "reset"
       takeHandler :: Handler (T.Text, Status, HeaderMap)

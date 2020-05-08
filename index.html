@@ -25,7 +25,7 @@
           if (thing != "empty") {
             things.push(thing);
           }
-          $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join());
+          $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join(" "));
         });
       }
 
@@ -33,7 +33,7 @@
         var thing = things.pop()
         console.log("putting " + thing + " back");
         $.get(HOST + "/putback?name=" + thing);
-        $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join());
+        $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join(" "));
       }
 
       function reset() {
@@ -51,7 +51,7 @@
         <p><b>don't touch this section once the game has started!</b></p>
         <input id="new-entry" />
         <button onclick="add()">add thing</button>
-        <button onclick="reset()">reset round</button>
+        <button onclick="reset()">start round (don't click me)</button>
       </div>
 
       <div class="row">

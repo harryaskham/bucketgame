@@ -4,7 +4,7 @@ module Main where
 
 import Control.Concurrent.MVar
 import Web.Firefly
-import Lib
+import Handlers
 
 main :: IO ()
 main = do

@@ -3,7 +3,7 @@
 {-# LANGUAGE TemplateHaskell #-}
 {-# LANGUAGE MultiWayIf #-}
 
-module Lib where
+module Handlers where
 
 import Control.Concurrent.MVar
 import System.Random

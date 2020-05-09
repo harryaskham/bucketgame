@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: b5d9a7bd7159aeeab421ae680664f4f8a673e21d5c130424e1f83b0c18c87a4a
+-- hash: fa639f1720cda407595e1035ef9bb5dc082b6e7e69bbbe53211f46295924a38f
 
 name:           bucketgame
 version:        0.1.0.0
@@ -25,7 +25,7 @@ source-repository head
 
 library
   exposed-modules:
-      Lib
+      Handlers
   other-modules:
       Paths_bucketgame
   hs-source-dirs:

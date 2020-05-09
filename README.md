@@ -1,6 +1,8 @@
 # bucketgame
 
-simple web implementation of the bucket game:
+simple web implementation of the bucket game.
+
+![preview](preview.png)
 
 - server tracks a single game in memory
 - client allows players to each add names to the game

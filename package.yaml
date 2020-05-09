@@ -8,7 +8,6 @@ copyright:           "2020 Author name here"
 
 extra-source-files:
 - README.md
-- ChangeLog.md
 
 # Metadata used when publishing your package
 # synopsis:            Short description of your package
@@ -39,17 +38,6 @@ executables:
   bucketgame-exe:
     main:                Main.hs
     source-dirs:         app
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - bucketgame
-
-tests:
-  bucketgame-test:
-    main:                Spec.hs
-    source-dirs:         test
     ghc-options:
     - -threaded
     - -rtsopts

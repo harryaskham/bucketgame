@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: df7904fd744dc7ac83a268250aaaa936e8e3efc61c966aae6fe866d932a31484
+-- hash: b5d9a7bd7159aeeab421ae680664f4f8a673e21d5c130424e1f83b0c18c87a4a
 
 name:           bucketgame
 version:        0.1.0.0
@@ -15,11 +15,9 @@ author:         Author name here
 maintainer:     example@example.com
 copyright:      2020 Author name here
 license:        BSD3
-license-file:   LICENSE
 build-type:     Simple
 extra-source-files:
     README.md
-    ChangeLog.md
 
 source-repository head
   type: git
@@ -52,29 +50,6 @@ executable bucketgame-exe
       Paths_bucketgame
   hs-source-dirs:
       app
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , blaze-html
-    , bucketgame
-    , bytestring
-    , containers
-    , firefly
-    , http-types
-    , lens
-    , random
-    , random-shuffle
-    , safe
-    , text
-  default-language: Haskell2010
-
-test-suite bucketgame-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_bucketgame
-  hs-source-dirs:
-      test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5

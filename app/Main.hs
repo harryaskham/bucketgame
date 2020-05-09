@@ -30,8 +30,8 @@ makeLenses ''GameState
 cors :: ToResponse b => b -> (b, Status, HeaderMap)
 cors b = (b, status200, M.fromList [("Access-Control-Allow-Origin", ["*"])])
 
-addHandler :: GameState -> Handler (T.Text, Status, HeaderMap)
-addHandler st = do
+addThingHandler :: GameState -> Handler (T.Text, Status, HeaderMap)
+addThingHandler st = do
   name <- getQuery "name"
   case name of
        Just n ->
@@ -90,7 +90,7 @@ main = do
                         , _unseen = uM
                         }
   run 3000 $ do
-    route "/add" $ addHandler state
+    route "/add" $ addThingHandler state
     route "/reset" $ resetHandler state
     route "/take" $ takeHandler state
     route "/putback" $ putBackHandler state

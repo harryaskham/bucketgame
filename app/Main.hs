@@ -49,7 +49,6 @@ main = do
       takeHandler :: Handler (T.Text, Status, HeaderMap)
       takeHandler = do
         es <- liftIO $ readMVar unseen
-        liftIO $ print es
         case headMay es of
           Just e -> do
             liftIO $ print "taking one thing"

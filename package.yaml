@@ -28,6 +28,9 @@ dependencies:
 - firefly
 - text
 - http-types
+- lens
+- blaze-html
+- bytestring
 
 library:
   source-dirs: src

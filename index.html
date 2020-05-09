@@ -31,9 +31,11 @@
 
       function putBack() {
         var thing = things.pop()
-        console.log("putting " + thing + " back");
-        $.get(HOST + "/putback?name=" + thing);
-        $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join(" "));
+        if (thing) {
+          console.log("putting " + thing + " back");
+          $.get(HOST + "/putback?name=" + thing);
+          $("#thing-container").html(things.map(t=>"<p>"+t+"</p>").join(" "));
+        }
       }
 
       function reset() {

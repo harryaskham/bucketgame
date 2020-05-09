@@ -4,7 +4,7 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 244b00e0c4c13624f20540907e4a91a3c1fa5820cc0d8be36e88a290cbbe4d95
+-- hash: df7904fd744dc7ac83a268250aaaa936e8e3efc61c966aae6fe866d932a31484
 
 name:           bucketgame
 version:        0.1.0.0
@@ -34,9 +34,12 @@ library
       src
   build-depends:
       base >=4.7 && <5
+    , blaze-html
+    , bytestring
     , containers
     , firefly
     , http-types
+    , lens
     , random
     , random-shuffle
     , safe
@@ -52,10 +55,13 @@ executable bucketgame-exe
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , blaze-html
     , bucketgame
+    , bytestring
     , containers
     , firefly
     , http-types
+    , lens
     , random
     , random-shuffle
     , safe
@@ -72,10 +78,13 @@ test-suite bucketgame-test
   ghc-options: -threaded -rtsopts -with-rtsopts=-N
   build-depends:
       base >=4.7 && <5
+    , blaze-html
     , bucketgame
+    , bytestring
     , containers
     , firefly
     , http-types
+    , lens
     , random
     , random-shuffle
     , safe
